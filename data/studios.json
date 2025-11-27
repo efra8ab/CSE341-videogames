@@ -1,0 +1,52 @@
+[
+  {
+    "_id": { "$oid": "665f00000000000000000001" },
+    "name": "FromSoftware",
+    "location": "Tokyo, Japan",
+    "foundedYear": 1986,
+    "website": "https://www.fromsoftware.jp",
+    "specialties": ["Action RPG", "Soulslike"],
+    "size": 400,
+    "notes": "Known for challenging action RPGs with intricate world design."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000002" },
+    "name": "Rockstar Games",
+    "location": "New York, NY",
+    "foundedYear": 1998,
+    "website": "https://www.rockstargames.com",
+    "specialties": ["Open World", "Action Adventure"],
+    "size": 2000,
+    "notes": "Creates cinematic open worlds with heavy narrative focus."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000003" },
+    "name": "Mojang Studios",
+    "location": "Stockholm, Sweden",
+    "foundedYear": 2009,
+    "website": "https://www.minecraft.net",
+    "specialties": ["Sandbox", "Adventure"],
+    "size": 600,
+    "notes": "Creators of Minecraft and related spin-offs."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000004" },
+    "name": "Santa Monica Studio",
+    "location": "Los Angeles, CA",
+    "foundedYear": 1999,
+    "website": "https://sms.playstation.com",
+    "specialties": ["Action", "Narrative"],
+    "size": 350,
+    "notes": "PlayStation studio behind the God of War franchise."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000005" },
+    "name": "TT Games",
+    "location": "Knutsford, UK",
+    "foundedYear": 2005,
+    "website": "https://www.ttgames.com",
+    "specialties": ["LEGO", "Family"],
+    "size": 300,
+    "notes": "Best known for LEGO adaptations of popular franchises."
+  }
+]

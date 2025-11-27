@@ -1,0 +1,167 @@
+[
+  {
+    "_id": { "$oid": "665f00000000000000000011" },
+    "title": "Dark Souls III",
+    "genre": "Action RPG",
+    "platform": "PC/PS4/Xbox One",
+    "releaseYear": 2016,
+    "rating": 9.2,
+    "modes": ["Single-player", "Online Co-op"],
+    "studio": { "$oid": "665f00000000000000000001" },
+    "summary": "Challenging action RPG with interconnected dark fantasy worlds."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000012" },
+    "title": "Sekiro: Shadows Die Twice",
+    "genre": "Action Adventure",
+    "platform": "PC/PS4/Xbox One",
+    "releaseYear": 2019,
+    "rating": 9.5,
+    "modes": ["Single-player"],
+    "studio": { "$oid": "665f00000000000000000001" },
+    "summary": "Precision swordplay with stealth and posture-focused combat."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000013" },
+    "title": "Elden Ring",
+    "genre": "Action RPG",
+    "platform": "PC/PS5/PS4/Xbox Series/One",
+    "releaseYear": 2022,
+    "rating": 9.7,
+    "modes": ["Single-player", "Online Co-op"],
+    "studio": { "$oid": "665f00000000000000000001" },
+    "summary": "Open-world soulslike with mounted exploration and deep lore."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000021" },
+    "title": "Grand Theft Auto V",
+    "genre": "Open World",
+    "platform": "PC/PS5/PS4/Xbox Series/One",
+    "releaseYear": 2013,
+    "rating": 9.5,
+    "modes": ["Single-player", "Online Multiplayer"],
+    "studio": { "$oid": "665f00000000000000000002" },
+    "summary": "Three-protagonist crime saga with sprawling online mode."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000022" },
+    "title": "Red Dead Redemption 2",
+    "genre": "Action Adventure",
+    "platform": "PC/PS4/Xbox One",
+    "releaseYear": 2018,
+    "rating": 9.8,
+    "modes": ["Single-player", "Online Multiplayer"],
+    "studio": { "$oid": "665f00000000000000000002" },
+    "summary": "Cinematic outlaw story set in a living open world."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000023" },
+    "title": "L.A. Noire",
+    "genre": "Detective Adventure",
+    "platform": "PC/PS4/Xbox One",
+    "releaseYear": 2011,
+    "rating": 8.7,
+    "modes": ["Single-player"],
+    "studio": { "$oid": "665f00000000000000000002" },
+    "summary": "Post-war detective cases with facial motion capture interrogation."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000031" },
+    "title": "Minecraft",
+    "genre": "Sandbox",
+    "platform": "PC",
+    "releaseYear": 2011,
+    "rating": 9.0,
+    "modes": ["Single-player", "Online Multiplayer"],
+    "studio": { "$oid": "665f00000000000000000003" },
+    "summary": "Block-building sandbox with survival and creative modes."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000032" },
+    "title": "Minecraft Dungeons",
+    "genre": "Dungeon Crawler",
+    "platform": "PC/PS4/Xbox/Switch",
+    "releaseYear": 2020,
+    "rating": 7.9,
+    "modes": ["Single-player", "Online Co-op", "Local Co-op"],
+    "studio": { "$oid": "665f00000000000000000003" },
+    "summary": "Family-friendly ARPG spin-off with co-op dungeon crawling."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000033" },
+    "title": "Minecraft Legends",
+    "genre": "Action Strategy",
+    "platform": "PC/PS5/PS4/Xbox/Switch",
+    "releaseYear": 2023,
+    "rating": 7.5,
+    "modes": ["Single-player", "Online Multiplayer"],
+    "studio": { "$oid": "665f00000000000000000003" },
+    "summary": "RTS-lite adventure defending the Overworld from piglin invasions."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000041" },
+    "title": "God of War",
+    "genre": "Action Adventure",
+    "platform": "PS4/PC",
+    "releaseYear": 2018,
+    "rating": 9.6,
+    "modes": ["Single-player"],
+    "studio": { "$oid": "665f00000000000000000004" },
+    "summary": "Father-son journey blending brutal combat with Norse mythology."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000042" },
+    "title": "God of War Ragnarök",
+    "genre": "Action Adventure",
+    "platform": "PS5/PS4",
+    "releaseYear": 2022,
+    "rating": 9.8,
+    "modes": ["Single-player"],
+    "studio": { "$oid": "665f00000000000000000004" },
+    "summary": "Epic conclusion to Kratos and Atreus's Norse saga."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000043" },
+    "title": "God of War III",
+    "genre": "Action Adventure",
+    "platform": "PS3/PS4",
+    "releaseYear": 2010,
+    "rating": 9.1,
+    "modes": ["Single-player"],
+    "studio": { "$oid": "665f00000000000000000004" },
+    "summary": "Mythic revenge tale with over-the-top set pieces from Greek mythology."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000051" },
+    "title": "LEGO Batman 3: Beyond Gotham",
+    "genre": "Action Adventure",
+    "platform": "PC/PS4/Xbox/Switch",
+    "releaseYear": 2014,
+    "rating": 8.0,
+    "modes": ["Single-player", "Local Co-op"],
+    "studio": { "$oid": "665f00000000000000000005" },
+    "summary": "LEGO superhero romp spanning the DC universe beyond Gotham."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000052" },
+    "title": "LEGO Star Wars: The Skywalker Saga",
+    "genre": "Action Adventure",
+    "platform": "PC/PS5/PS4/Xbox/Switch",
+    "releaseYear": 2022,
+    "rating": 8.6,
+    "modes": ["Single-player", "Local Co-op"],
+    "studio": { "$oid": "665f00000000000000000005" },
+    "summary": "All nine Skywalker films retold with expansive hubs and co-op."
+  },
+  {
+    "_id": { "$oid": "665f00000000000000000053" },
+    "title": "LEGO Marvel Super Heroes",
+    "genre": "Action Adventure",
+    "platform": "PC/PS4/Xbox/Switch",
+    "releaseYear": 2013,
+    "rating": 8.4,
+    "modes": ["Single-player", "Local Co-op"],
+    "studio": { "$oid": "665f00000000000000000005" },
+    "summary": "Open-world LEGO take on Marvel heroes with drop-in co-op."
+  }
+]

@@ -1,0 +1,31 @@
+### Get all studios
+GET http://localhost:8080/studios
+
+### Create a studio
+POST http://localhost:8080/studios
+Content-Type: application/json
+
+{
+  "name": "Pixel Pillars",
+  "location": "Seattle, WA",
+  "foundedYear": 2018,
+  "website": "https://pixelpillars.dev",
+  "specialties": ["Indie", "Platformer"]
+}
+
+### Get all games
+GET http://localhost:8080/games
+
+### Create a game (replace {{studioId}} with a real studio _id)
+POST http://localhost:8080/games
+Content-Type: application/json
+
+{
+  "title": "Skyward Signal",
+  "genre": "Adventure",
+  "platform": "PC",
+  "releaseYear": 2024,
+  "rating": 9,
+  "studio": "{{studioId}}",
+  "summary": "Story-driven aerial adventure game."
+}

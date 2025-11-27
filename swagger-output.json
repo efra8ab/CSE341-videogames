@@ -1,0 +1,523 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Videogames API",
+    "description": "CRUD API for games and studios (Project 2, CSE341)",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/games/": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "summary": "Retrieve all games",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "A list of games",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Game"
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Games"
+        ],
+        "summary": "Create a new game",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewGame"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The created game",
+            "schema": {
+              "$ref": "#/definitions/Game"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/games/{id}": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "summary": "Retrieve a single game",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the game"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Game that matches the provided id",
+            "schema": {
+              "$ref": "#/definitions/Game"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Games"
+        ],
+        "summary": "Update a game",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the game"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewGame"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated game",
+            "schema": {
+              "$ref": "#/definitions/Game"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Games"
+        ],
+        "summary": "Delete a game",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the game"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Game removed successfully"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/studios/": {
+      "get": {
+        "tags": [
+          "Studios"
+        ],
+        "summary": "Retrieve all studios",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "A list of studios",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Studio"
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Studios"
+        ],
+        "summary": "Create a new studio",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewStudio"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "The created studio",
+            "schema": {
+              "$ref": "#/definitions/Studio"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/studios/{id}": {
+      "get": {
+        "tags": [
+          "Studios"
+        ],
+        "summary": "Retrieve a single studio",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the studio"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Studio that matches the provided id",
+            "schema": {
+              "$ref": "#/definitions/Studio"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Studios"
+        ],
+        "summary": "Update a studio",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the studio"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewStudio"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated studio",
+            "schema": {
+              "$ref": "#/definitions/Studio"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Studios"
+        ],
+        "summary": "Delete a studio",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "MongoDB identifier for the studio"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Studio removed successfully"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Studio": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string",
+          "example": "65e0d3a0e4f9a24bc1e4d301"
+        },
+        "name": {
+          "type": "string",
+          "example": "Retro Forge"
+        },
+        "location": {
+          "type": "string",
+          "example": "Madrid, Spain"
+        },
+        "foundedYear": {
+          "type": "number",
+          "example": 2015
+        },
+        "website": {
+          "type": "string",
+          "example": "https://retroforge.dev"
+        },
+        "specialties": {
+          "type": "array",
+          "example": [
+            "Metroidvania",
+            "Pixel Art"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "size": {
+          "type": "number",
+          "example": 40
+        },
+        "notes": {
+          "type": "string",
+          "example": "Boutique team focused on hand-crafted metroidvanias."
+        }
+      }
+    },
+    "NewStudio": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Moonlight Works"
+        },
+        "location": {
+          "type": "string",
+          "example": "Austin, TX"
+        },
+        "foundedYear": {
+          "type": "number",
+          "example": 2020
+        },
+        "website": {
+          "type": "string",
+          "example": "https://moonlight.gg"
+        },
+        "specialties": {
+          "type": "array",
+          "example": [
+            "Indie",
+            "Strategy"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "size": {
+          "type": "number",
+          "example": 28
+        },
+        "notes": {
+          "type": "string",
+          "example": "Remote-first studio shipping small-but-polished games."
+        }
+      }
+    },
+    "Game": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string",
+          "example": "65e0d4cfe4f9a24bc1e4d305"
+        },
+        "title": {
+          "type": "string",
+          "example": "Blade Runner Zero"
+        },
+        "genre": {
+          "type": "string",
+          "example": "Action RPG"
+        },
+        "platform": {
+          "type": "string",
+          "example": "PC"
+        },
+        "releaseYear": {
+          "type": "number",
+          "example": 2024
+        },
+        "rating": {
+          "type": "number",
+          "example": 9
+        },
+        "studio": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string",
+              "example": "65e0d3a0e4f9a24bc1e4d301"
+            },
+            "name": {
+              "type": "string",
+              "example": "Retro Forge"
+            }
+          }
+        },
+        "summary": {
+          "type": "string",
+          "example": "Neon-drenched action adventure set in a future mega city."
+        }
+      }
+    },
+    "NewGame": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "Crystal Spire"
+        },
+        "genre": {
+          "type": "string",
+          "example": "JRPG"
+        },
+        "platform": {
+          "type": "string",
+          "example": "Switch"
+        },
+        "releaseYear": {
+          "type": "number",
+          "example": 2025
+        },
+        "rating": {
+          "type": "number",
+          "example": 8
+        },
+        "studio": {
+          "type": "string",
+          "example": "65e0d3a0e4f9a24bc1e4d301"
+        },
+        "summary": {
+          "type": "string",
+          "example": "Classic turn-based epic with monster collecting."
+        }
+      }
+    }
+  }
+}
