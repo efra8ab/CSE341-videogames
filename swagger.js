@@ -14,6 +14,14 @@ const doc = {
   schemes: [process.env.SWAGGER_SCHEME || 'http'],
   consumes: ['application/json'],
   produces: ['application/json'],
+  securityDefinitions: {
+    BearerAuth: {
+      type: 'apiKey',
+      name: 'Authorization',
+      in: 'header',
+      description: 'Format: Bearer {token}',
+    },
+  },
   definitions: {
     Studio: {
       _id: '65e0d3a0e4f9a24bc1e4d301',
@@ -55,6 +63,19 @@ const doc = {
       rating: 8,
       studio: '65e0d3a0e4f9a24bc1e4d301',
       summary: 'Classic turn-based epic with monster collecting.',
+    },
+    RegisterRequest: {
+      username: 'player1',
+      password: 'P@ssw0rd123',
+    },
+    LoginRequest: {
+      username: 'admin',
+      password: 'password123',
+    },
+    LoginResponse: {
+      token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
+      tokenType: 'Bearer',
+      expiresIn: 7200,
     },
   },
 };

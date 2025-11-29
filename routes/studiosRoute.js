@@ -1,5 +1,6 @@
 const express = require('express');
 const studiosController = require('../controllers/studiosController');
+const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -49,7 +50,9 @@ router.post(
       description: 'The created studio',
       schema: { $ref: '#/definitions/Studio' }
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   studiosController.createStudio
 );
 
@@ -73,7 +76,9 @@ router.put(
       description: 'Updated studio',
       schema: { $ref: '#/definitions/Studio' }
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   studiosController.updateStudio
 );
 
@@ -91,7 +96,9 @@ router.delete(
     #swagger.responses[204] = {
       description: 'Studio removed successfully'
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   studiosController.deleteStudio
 );
 

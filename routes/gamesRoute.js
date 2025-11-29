@@ -1,5 +1,6 @@
 const express = require('express');
 const gamesController = require('../controllers/gamesController');
+const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -49,7 +50,9 @@ router.post(
       description: 'The created game',
       schema: { $ref: '#/definitions/Game' }
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   gamesController.createGame
 );
 
@@ -73,7 +76,9 @@ router.put(
       description: 'Updated game',
       schema: { $ref: '#/definitions/Game' }
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   gamesController.updateGame
 );
 
@@ -91,7 +96,9 @@ router.delete(
     #swagger.responses[204] = {
       description: 'Game removed successfully'
     }
+    #swagger.security = [{ BearerAuth: [] }]
   */
+  requireAuth,
   gamesController.deleteGame
 );
 
